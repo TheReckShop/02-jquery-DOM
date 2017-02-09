@@ -15,6 +15,7 @@ Article.prototype.toHtml = function() {
   for that before this current article gets rendered to our
   DOM. */
   // one line of code to remove the class that hides the template so that the articles will actually show
+  $newArticle.removeClass('template');
 
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.data('category', this.category);
