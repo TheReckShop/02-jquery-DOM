@@ -37,9 +37,10 @@ Article.prototype.toHtml = function() {
 
     // lots of $newArticle.find...  (look at jQuery $.find docs)
   $newArticle.find('.byline address a').html(this.author);
-  $newArticle.find('article header h1').html(this.title);
+  $newArticle.find('h1').html(this.title);
   $newArticle.find('.article-body').html(this.body);
-
+  $newArticle.find('.byline address time').html(this.publishedOn);
+  $newArticle.find('.byline address a').attr('href',this.authorUrl);
   console.log($newArticle);
 
   // Display the date as a relative number of 'days ago'
