@@ -6,6 +6,12 @@ function Article (opts) {
   // TODO: Use the JS object passed in to complete this constructor function:
   // Save ALL the properties of `opts` into `this`
   // lots of this.someProperty = opts.property
+  this.title=opts.title
+  this.category=opts.category
+  this.author=opts.author
+  this.authorUrl.opts.authorUrl
+  this.publishedOn.opts.publishedOn
+  this.body.opts.body
 }
 
 Article.prototype.toHtml = function() {
@@ -31,7 +37,7 @@ Article.prototype.toHtml = function() {
 
     // lots of $newArticle.find...  (look at jQuery $.find docs)
 
-    console.log($newArticle);
+  console.log($newArticle);
 
   // Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
